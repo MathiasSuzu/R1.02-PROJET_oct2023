@@ -12,6 +12,7 @@
     --bg-third-color: #060606;
     --text-color: #ffff;
     --active-color: #ff8f45;
+    --bg-light-color: #555;
     --active-color-rgb: rgba(255,143,69,0.6);
     --white-shadow: rgb(255, 255, 255, 0.2);
     --black-shadow: rgb(0, 0, 0, 0.2);
@@ -24,23 +25,24 @@
 }
   
 ::-webkit-scrollbar-track {
-    background: #262626; /* Couleur de l'arrière-plan de la piste de défilement */
+    background: var(--bg-color); /* Couleur de l'arrière-plan de la piste de défilement */
     width: 0.2vw;
 }
   
 ::-webkit-scrollbar-thumb {
-    background: #161616; /* Couleur de la poignée de défilement */
+    background: var(--bg-color-second); /* Couleur de la poignée de défilement */
     border-radius: 5px; /* Coins arrondis pour la poignée */
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Couleur de la poignée au survol */
+    background: var(--bg-light-color); /* Couleur de la poignée au survol */
 }
 
 ::selection {
-    background-color: #161616;
-    color: #FF8F45;
+    background-color: var(--bg-light-color);
+    color: var(--active-color);
 }
+
 
 /* body */
 body {
@@ -48,6 +50,41 @@ body {
     height: 100%;
     background-color: var(--bg-color);
 }
+
+
+/* classe d'éléments redondant */
+    /* liens et son annimation */
+    .link {
+        color: var(--active-color);
+        font-size: 1vw;
+        font-family: var(--font);
+        transition: font-size 0.2s ease;
+        text-decoration: none;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+        font-size: 1.1vw;
+    }
+
+    /* centrage de texte */
+    .text-center {
+        text-align: center;
+    }
+
+    .text {
+        color: var(--text-color);
+        font-family: var(--font);
+    }
+
+    .text-active {
+        color: var(--active-color);
+    }
+
+    .text-bold {
+        font-weight: bold;
+    }
+
 
 /* MENU de navigation */
     nav.menu ul {
@@ -78,10 +115,7 @@ body {
     }
 
     nav.menu ul li a h2 {
-        color: var(--text-color);
         font-size: 1.5vw;
-        font-weight: bold;
-        font-family: var(--font);
         text-transform: uppercase;
     }
 
@@ -127,11 +161,7 @@ body {
         margin: 5vh auto;
     }
     header h1 {
-        color: var(--active-color);
         font-size: 3vw;
-        font-weight: bold;
-        font-family: var(--font);
-        text-align: center;
         text-shadow: 0px 0px 10px var(--active-color-rgb);
     }
 
@@ -146,11 +176,7 @@ body {
     }
     
     section h3 {
-        color: var(--text-color);
         font-size: 2vw;
-        font-weight: bold;
-        font-family: var(--font);
-        text-align: center;
         text-decoration: underline dashed;
         text-underline-offset: 0.5vh;
     }
@@ -165,10 +191,7 @@ body {
 
     /* titre des article */
     section article h4 {
-        color: var(--text-color);
         font-size: 1.25vw;
-        font-weight: bold;
-        font-family: var(--font);
         padding-bottom: 2vh;
         text-decoration: underline;
         text-underline-offset: 0.4vh;
@@ -178,7 +201,7 @@ body {
         text-decoration: none;
     }
     
-    /* image github */
+    /* image github et son animation*/
     .github-image a img{
         width: 50vw;
         margin-bottom: 1vh;
@@ -191,6 +214,7 @@ body {
         border-radius: 10px;
     }
 
+    /* on s'occupe aussi du lien car il travail avec l'image */
     .github-image a span {
         color: var(--active-color);
         font-size: 1vw;
@@ -201,12 +225,6 @@ body {
     .github-image a:hover span {
         text-decoration: underline;
         font-size: 1.1vw;
-    }
-
-    /* textes des articles */
-    .sommaire {
-        font-family: var(--font);
-        color: var(--text-color);
     }
 
     /* liste chiffré */
@@ -226,15 +244,14 @@ body {
         font-size: 1.1vw;
         padding: 0.5vh 0;
     }
-    
-    /* taille des liens dans la sous-liste */
-    .sommaire a {
-        color: var(--active-color);
-        text-decoration: none;
+
+
+/* Footer */
+    footer {
+        margin: 5vh auto;
+    }
+
+    footer p{
         font-size: 1vw;
-        transition: font-size 0.2s ease;
     }
-    .sommaire a:hover {
-        font-size: 1.1vw;
-        text-decoration: underline;
-    }
+
