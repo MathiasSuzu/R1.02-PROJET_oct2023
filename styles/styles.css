@@ -397,11 +397,13 @@ body {
         }
 
         section article {
+            margin: 2.5vh 5vw;
             padding: 2vh 4vw;
         }
         
         .sommaire {
             padding-left: 7.5vw;
+            margin-top: 1vh;
         }
 
         .sommaire ul {
@@ -410,7 +412,7 @@ body {
 
         .sommaire>li {
             font-size: 3vw;
-            padding: 1vh 0;
+            padding: 0.33vh 0;
         }
 
         /* github image pas tres importante et prends beaucoup de place sur telephone donc on enleve*/
