@@ -1,0 +1,216 @@
+/* enlever les marges et paddings par défaut */
+* { 
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* Variable couleur */
+:root {
+    --bg-color : #262626;
+    --bg-second-color: #161616; 
+    --bg-third-color: #060606;
+    --text-color: #ffff;
+    --active-color: #ff8f45;
+    --active-color-rgb: rgba(255,143,69,0.6);
+    --white-shadow: rgb(255, 255, 255, 0.2);
+    --black-shadow: rgb(0, 0, 0, 0.2);
+    --font: Arial;
+}
+
+/* body */
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+/* MENU de navigation */
+    nav.menu ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+        list-style-type: none; /* retire les points */
+        background-color: var(--bg-second-color);
+        /* box-shadow: 0px 0px 10px var(--white-shadow); */
+
+        margin-bottom: 2vh;
+        /* vertical | horizontal */
+        padding: 2vh 0;
+        
+    }
+
+    /* alligner image et texte */
+    nav.menu ul li a{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        text-decoration: none; /* retire le soulignement */
+        /* vertical | horizontal */
+        margin: auto 1.5vw;
+    }
+
+    nav.menu ul li a h2 {
+        color: var(--text-color);
+        font-size: 1.5vw;
+        font-weight: bold;
+        font-family: var(--font);
+        text-transform: uppercase;
+    }
+
+    /* taille des images du menu */
+    nav.menu ul li a img {
+        margin-right: 0.5vw;
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    /* couleur du lien actif */
+    nav.menu ul li.active a h2 {
+        color: var(--active-color);
+    }
+
+    /* pointeur de la souris différent car il est déjà sur la page*/
+    nav.menu ul li.active a{
+        cursor: alias; /*donne l'impression de recharger la page*/
+    }
+
+    /* transition du texte et de l'image */
+    nav.menu ul li a h2 {
+        transition: color 0.2s ease;
+    }
+
+    nav.menu ul li a img {
+        transition: transform 0.2s ease;
+    }
+
+
+    /* modification de transition*/
+    nav.menu ul li.none-active a:hover h2 {
+        color: var(--active-color);
+    }
+    nav.menu ul li a:hover img {
+        transform: scale(1.1);
+    }
+
+
+/* Header */
+    header {
+        /* vertical | horizontal */
+        margin: 5vh auto;
+    }
+    header h1 {
+        color: var(--active-color);
+        font-size: 3vw;
+        font-weight: bold;
+        font-family: var(--font);
+        text-align: center;
+        text-shadow: 0px 0px 10px var(--active-color-rgb);
+    }
+
+/* section et article*/
+    section {
+        /* vertical | horizontal */
+        margin: auto 10vw;
+        padding: 5vh 0;
+        background-color: var(--bg-second-color);
+        border-radius: 10px;
+        box-shadow: 0px 0px 15px var(--white-shadow);
+    }
+    
+    section h3 {
+        color: var(--text-color);
+        font-size: 2vw;
+        font-weight: bold;
+        font-family: var(--font);
+        text-align: center;
+        text-decoration: underline dashed;
+        text-underline-offset: 0.5vh;
+    }
+
+    section article {
+        /* vertical | horizontal */
+        margin: 5vh 5vw;
+        padding: 2vh 2vw;
+        background-color: var(--bg-third-color);
+        box-shadow: 0px 0px 15px var(--black-shadow);
+    }
+
+    /* titre des article */
+    section article h4 {
+        color: var(--text-color);
+        font-size: 1.25vw;
+        font-weight: bold;
+        font-family: var(--font);
+        padding-bottom: 2vh;
+        text-decoration: underline;
+        text-underline-offset: 0.4vh;
+    }
+
+    .github-image a{
+        text-decoration: none;
+    }
+    
+    /* image github */
+    .github-image a img{
+        width: 50vw;
+        margin-bottom: 1vh;
+        transition: width 0.2s ease, border 0.2s ease;
+    }
+
+    .github-image a:hover img {
+        width: 52.5vw;
+        border: var(--active-color) 5px solid;
+        border-radius: 10px;
+    }
+
+    .github-image a span {
+        color: var(--active-color);
+        font-size: 1vw;
+        font-family: var(--font);
+        transition: font-size 0.2s ease;
+    }
+
+    .github-image a:hover span {
+        text-decoration: underline;
+        font-size: 1.1vw;
+    }
+
+    /* textes des articles */
+    .sommaire {
+        font-family: var(--font);
+        color: var(--text-color);
+    }
+
+    /* liste chiffré */
+    .sommaire {
+        list-style-type: decimal;
+        padding-left: 3vw;
+    }
+
+    /* sous-liste carre */
+    .sommaire ul {
+        list-style-type: square;
+        padding-left: 4vw;
+    }
+
+
+    .sommaire>li {
+        font-size: 1.1vw;
+        padding: 0.5vh 0;
+    }
+    
+    /* taille des liens dans la sous-liste */
+    .sommaire a {
+        color: var(--active-color);
+        text-decoration: none;
+        font-size: 1vw;
+        transition: font-size 0.2s ease;
+    }
+    .sommaire a:hover {
+        font-size: 1.1vw;
+        text-decoration: underline;
+    }
