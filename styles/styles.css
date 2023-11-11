@@ -103,10 +103,12 @@ body {
         MENU de navigation
         
 */
-    nav.menu ul {
+    nav.menu {
         position: fixed; /* Fixe la barre de navigation */
         top: 0;
         width: 100%;
+    }
+    nav.menu ul {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -292,8 +294,8 @@ body {
 
 
 
-/* Media queries pour le responsive 992px equivalent md bootstrap*/
-@media screen and (max-width: 992px) {
+/* Media queries pour le responsive equivalent sm bootstrap*/
+@media screen and (max-width: 992px){
     header h1 {
         font-size: 3rem;
     }
@@ -315,7 +317,7 @@ body {
     }
 }
 
-/* Media queries pour le responsive 768px equivalent sm bootstrap*/
+/* Media queries pour le responsive 768px equivalent sx bootstrap*/
 @media screen and (max-width: 768px) {
     .link {
         font-size: 1rem;
@@ -328,7 +330,7 @@ body {
     header h1 {
         font-size: 2.5rem;
     }
-
+    
     nav.menu ul li a h2 {
         font-size: 1rem;
     }
@@ -349,8 +351,26 @@ body {
     .github-image a span {
         font-size: 1rem;
     }
-    
+
     .github-image a:hover span {
         font-size: 1.1rem;
+    }
+}
+
+/* Media queries pour le responsive portrait */
+@media (orientation : portrait) {
+    @media screen and (max-width: 768px) {
+        nav.menu ul li a {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav.menu ul li a h2 {
+            margin-top: 1vh;
+        }
+        
+        header {
+            margin-top: 14vh;
+        };
     }
 }
