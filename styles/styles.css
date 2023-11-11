@@ -357,7 +357,7 @@ body {
     }
 }
 
-/* Media queries pour le responsive portrait */
+/* Media queries pour le responsive portrait (telephone)*/
 @media (orientation : portrait) {
     @media screen and (max-width: 768px) {
         .link {
@@ -386,6 +386,20 @@ body {
             font-size: 3vw;
             margin-top: 1vh;
         }
+        
+        section h3 {
+            font-size: 4.5vw;
+        }
+
+        section article h4 {
+            font-size: 4vw;
+            padding-bottom: 0.5vh;
+        }
+
+        section article {
+            padding: 2vh 4vw;
+        }
+        
         .sommaire {
             padding-left: 7.5vw;
         }
@@ -399,21 +413,21 @@ body {
             padding: 1vh 0;
         }
 
-        section h3 {
-            font-size: 4.5vw;
+        /* github image pas tres importante et prends beaucoup de place sur telephone donc on enleve*/
+        .github-image a img{
+            display: none;
         }
 
-        section article h4 {
-            font-size: 4vw;
-            padding-bottom: 0.5vh;
-        }
-        
         .github-image a span {
             font-size: 3vw;
         }
     
         .github-image a:hover span {
             font-size: 3.5vw;
+        }
+
+        footer p {
+            font-size: 3vw;
         }
     }
 }
