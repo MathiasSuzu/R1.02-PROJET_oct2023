@@ -12,6 +12,7 @@
     --bg-third-color: #060606;
     --text-color: #ffff;
     --active-color: #ff8f45;
+    --actived-color: #d96d26;
     --bg-light-color: #555;
     --active-color-rgb: rgba(255,143,69,0.6);
     --white-shadow: rgb(255, 255, 255, 0.2);
@@ -19,29 +20,33 @@
     --font: Arial;
 }
 
-/* parametrage niveau navigateur */
-::-webkit-scrollbar {
-    width: 0.5vw; /* Largeur de la barre de défilement verticale */
-}
-  
-::-webkit-scrollbar-track {
-    background: var(--bg-color); /* Couleur de l'arrière-plan de la piste de défilement */
-    width: 0.2vw;
-}
-  
-::-webkit-scrollbar-thumb {
-    background: var(--bg-color-second); /* Couleur de la poignée de défilement */
-    border-radius: 5px; /* Coins arrondis pour la poignée */
-}
-  
-::-webkit-scrollbar-thumb:hover {
-    background: var(--bg-light-color); /* Couleur de la poignée au survol */
-}
+/* 
 
-::selection {
-    background-color: var(--bg-light-color);
-    color: var(--active-color);
-}
+        parametrage niveau navigateur 
+
+*/
+    ::-webkit-scrollbar {
+        width: 0.5vw; /* Largeur de la barre de défilement verticale */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--bg-color); /* Couleur de l'arrière-plan de la piste de défilement */
+        width: 0.2vw;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--bg-color-second); /* Couleur de la poignée de défilement */
+        border-radius: 5px; /* Coins arrondis pour la poignée */
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--bg-light-color); /* Couleur de la poignée au survol */
+    }
+
+    ::selection {
+        background-color: var(--bg-light-color);
+        color: var(--active-color);
+    }
 
 
 /* body */
@@ -52,11 +57,15 @@ body {
 }
 
 
-/* classe d'éléments redondant */
+/* 
+
+        classe d'éléments redondant
+
+*/
     /* liens et son annimation */
     .link {
         color: var(--active-color);
-        font-size: 1vw;
+        font-size: 1.1rem;
         font-family: var(--font);
         transition: font-size 0.2s ease;
         text-decoration: none;
@@ -64,7 +73,7 @@ body {
 
     .link:hover {
         text-decoration: underline;
-        font-size: 1.1vw;
+        font-size: 1.25rem;
     }
 
     /* centrage de texte */
@@ -86,7 +95,11 @@ body {
     }
 
 
-/* MENU de navigation */
+/* 
+
+        MENU de navigation
+        
+*/
     nav.menu ul {
         display: flex;
         flex-direction: row;
@@ -115,15 +128,15 @@ body {
     }
 
     nav.menu ul li a h2 {
-        font-size: 1.5vw;
+        font-size: 1.75rem;
         text-transform: uppercase;
     }
 
     /* taille des images du menu */
     nav.menu ul li a img {
         margin-right: 0.5vw;
-        width: 1.5vw;
-        height: 1.5vw;
+        width: 1.75rem;
+        height: 1.75rem;
     }
 
     /* couleur du lien actif */
@@ -146,26 +159,34 @@ body {
     }
 
 
-    /* modification de transition*/
+    /* modification de transition au survol de la souris */
     nav.menu ul li.none-active a:hover h2 {
         color: var(--active-color);
     }
     nav.menu ul li a:hover img {
-        transform: scale(1.1);
+        transform: scale(1.25);
     }
 
 
-/* Header */
+/* 
+
+        Header
+
+*/
     header {
         /* vertical | horizontal */
         margin: 5vh auto;
     }
     header h1 {
-        font-size: 3vw;
+        font-size: 3.5rem;
         text-shadow: 0px 0px 10px var(--active-color-rgb);
     }
 
-/* section et article*/
+/* 
+
+        section et article
+
+ */
     section {
         /* vertical | horizontal */
         margin: auto 10vw;
@@ -176,7 +197,7 @@ body {
     }
     
     section h3 {
-        font-size: 2vw;
+        font-size: 2.5rem;
         text-decoration: underline dashed;
         text-underline-offset: 0.5vh;
     }
@@ -191,7 +212,7 @@ body {
 
     /* titre des article */
     section article h4 {
-        font-size: 1.25vw;
+        font-size: 1.5rem;
         padding-bottom: 2vh;
         text-decoration: underline;
         text-underline-offset: 0.4vh;
@@ -203,13 +224,13 @@ body {
     
     /* image github et son animation*/
     .github-image a img{
-        width: 50vw;
+        width: 50rem;
         margin-bottom: 1vh;
         transition: width 0.2s ease, border 0.2s ease;
     }
 
     .github-image a:hover img {
-        width: 52.5vw;
+        width: 52.5rem;
         border: var(--active-color) 5px solid;
         border-radius: 10px;
     }
@@ -217,14 +238,14 @@ body {
     /* on s'occupe aussi du lien car il travail avec l'image */
     .github-image a span {
         color: var(--active-color);
-        font-size: 1vw;
+        font-size: 1.1rem;
         font-family: var(--font);
         transition: font-size 0.2s ease;
     }
 
     .github-image a:hover span {
         text-decoration: underline;
-        font-size: 1.1vw;
+        font-size: 1.25rem;
     }
 
     /* liste chiffré */
@@ -241,7 +262,7 @@ body {
 
 
     .sommaire>li {
-        font-size: 1.1vw;
+        font-size: 1.3rem;
         padding: 0.5vh 0;
     }
 
@@ -252,6 +273,6 @@ body {
     }
 
     footer p{
-        font-size: 1vw;
+        font-size: 1.1rem;
     }
 
