@@ -12,7 +12,7 @@
     --bg-third-color: #060606;
     --text-color: #ffff;
     --active-color: #ff8f45;
-    --actived-color: #d96d26;
+    --actived-color: #ff6600;
     --bg-light-color: #555;
     --active-color-rgb: rgba(255,143,69,0.6);
     --white-shadow: rgb(255, 255, 255, 0.2);
@@ -75,6 +75,9 @@ body {
         text-decoration: underline;
         font-size: 1.25rem;
     }
+    .link:visited {
+        color: var(--actived-color);
+    }
 
     /* centrage de texte */
     .text-center {
@@ -101,6 +104,9 @@ body {
         
 */
     nav.menu ul {
+        position: fixed; /* Fixe la barre de navigation */
+        top: 0;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -109,8 +115,6 @@ body {
         list-style-type: none; /* retire les points */
         background-color: var(--bg-second-color);
         /* box-shadow: 0px 0px 10px var(--white-shadow); */
-
-        margin-bottom: 2vh;
         /* vertical | horizontal */
         padding: 2vh 0;
         
@@ -175,7 +179,7 @@ body {
 */
     header {
         /* vertical | horizontal */
-        margin: 5vh auto;
+        margin: 11vh auto 5vh auto;
     }
     header h1 {
         font-size: 3.5rem;
@@ -224,14 +228,21 @@ body {
     
     /* image github et son animation*/
     .github-image a img{
-        width: 50rem;
+        width: 50vw;
         margin-bottom: 1vh;
         transition: width 0.2s ease, border 0.2s ease;
     }
 
     .github-image a:hover img {
-        width: 52.5rem;
+        width: 52.5vw;
         border: var(--active-color) 5px solid;
+        border-radius: 10px;
+    }
+
+    /* changer couleur du lien car deja visite */
+    .github-image a:visited:visited img {
+        width: 52.5vw;
+        border: var(--actived-color) 5px solid;
         border-radius: 10px;
     }
 
@@ -246,6 +257,9 @@ body {
     .github-image a:hover span {
         text-decoration: underline;
         font-size: 1.25rem;
+    }
+    .github-image a:visited span{
+        color: var(--actived-color);
     }
 
     /* liste chiffré */
@@ -276,3 +290,67 @@ body {
         font-size: 1.1rem;
     }
 
+
+
+/* Media queries pour le responsive 992px equivalent md bootstrap*/
+@media screen and (max-width: 992px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    nav.menu ul li a h2 {
+        font-size: 1.5rem;
+    }
+
+    nav.menu ul li a img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    section h3 {
+        font-size: 2rem;
+    }
+    section article h4 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Media queries pour le responsive 768px equivalent sm bootstrap*/
+@media screen and (max-width: 768px) {
+    .link {
+        font-size: 1rem;
+    }
+    
+    .link:hover {
+        font-size: 1.1rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav.menu ul li a h2 {
+        font-size: 1rem;
+    }
+
+    nav.menu ul li a img {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    nav.menu ul li a:hover img {
+        transform: scale(1.35);
+    }
+
+    section h3 {
+        font-size: 1.5rem;
+    }
+
+    .github-image a span {
+        font-size: 1rem;
+    }
+    
+    .github-image a:hover span {
+        font-size: 1.1rem;
+    }
+}
