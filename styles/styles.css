@@ -231,9 +231,27 @@ body {
     section article audio, section article video {
         width: 50%;
     }
+    
+    /* tableau des competences */
+    section article table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 1.25rem;
+        text-align: center;
+        
+    }
 
     section article table td {
-        border: 1px solid #333;
+        border: 1px solid #ffff;
+        /* vertical | horizontal */
+        padding: 2vh 3vw;
+        width: 10vw;
+    }
+
+    section article table td.cp-lang {
+        color: var(--active-color);
+        font-weight: bold;
+
     }
 
     .github-image a{
@@ -368,6 +386,11 @@ body {
     section article audio, section article video {
         width: 100%;
 
+    }
+
+    section article table {
+        font-size: 3vw;
+        width: 1vw;
     }
 
     .github-image a span {
