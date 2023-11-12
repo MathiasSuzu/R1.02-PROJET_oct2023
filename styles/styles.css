@@ -257,6 +257,25 @@ body {
     section article p {
         font-size: 1.1rem;
     }
+    
+    section article .btn-outline-warning {
+        --bs-btn-color: var(--active-color);
+        --bs-btn-border-color: var(--active-color);
+        --bs-btn-active-color: var(--text-color);
+        --bs-btn-hover-color: var(--text-color);
+        --bs-btn-hover-bg: var(--active-color);
+        --bs-btn-hover-border-color: var(--active-color);
+        --bs-btn-active-bg: var(--active-color);
+        --bs-btn-active-border-color: var(--active-color);
+        --bs-btn-disabled-color: var(--active-color);
+        --bs-btn-disabled-border-color: var(--active-color);
+        font-size: 1.1rem;
+    }
+
+    section article .form-control:focus {
+        border-color: var(--active-color); /* Changez la couleur selon vos préférences */
+        box-shadow: 0 0 0 0.2rem rgba(255, 143, 69, 0.25); /* Ajoutez une légère ombre lorsqu'il est sélectionné */
+    }
 
     .github-image a{
         text-decoration: none;
