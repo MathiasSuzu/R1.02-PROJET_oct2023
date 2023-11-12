@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="icon" type="image/png" href="./icon/test-tube.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Expériences</title>
 </head>
@@ -51,6 +52,34 @@
             <h4 class="text text-bold">Expériences :</h4>
             <p class="text">&nbsp;&nbsp;De l'experiences j'en ai hélas que très peux. C'est pour cela que je vous met si dessous un joli formulaire qui vous permet de donner votre expériences de navigation sur ce site (mon portefolio). Moi je vous ai trouvé très attentif et très curieux. Comme ca maintenant on est quitte, je vous ai donner l'impression (positive) que j'ai eu de vous. C'est pour cela que vous pouvez aisément remplire ce petit formulaire. il reste malgrès tout mon <a href="https://github.com/MathiasSuzu" class="link">github</a>.&#128521;</p>
         </article>
+
+        <article class="bootstrap">
+            <div class="container text text-bold" data-bs-theme="dark">
+                <h4 class="text text-bold">Livre d'or</h4>
+                
+                <form id="commentForm">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">Prénom :</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Mathias" required>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Nom :</label>
+                            <input type="text" class="form-control" id="lastName" placeholder="Fan" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Commentaire :</label>
+                        <textarea class="form-control" id="comment" rows="4" placeholder="J'aime beaucoup ce site car ..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary col-md-2">Ajouter le commentaire</button>
+                </form>
+                
+            </div>
+        </article>
     </section>
 
     <footer class="text-center">
@@ -59,5 +88,6 @@
             <br/> prendre contact <a name="mail-admin" href="mailto:contact@septmg.fr" class="link">ici</a>.
         </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
