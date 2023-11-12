@@ -254,6 +254,10 @@ body {
 
     }
 
+    section article p {
+        font-size: 1.1rem;
+    }
+
     .github-image a{
         text-decoration: none;
     }
@@ -341,6 +345,9 @@ body {
 
     section h3 {
         font-size: 2rem;
+    }
+    section article p {
+        font-size: 1rem;
     }
     section article h4 {
         font-size: 1.25rem;
@@ -444,6 +451,10 @@ body {
         section article {
             margin: 2.5vh 5vw;
             padding: 2vh 4vw;
+        }
+
+        section article p {
+            font-size: 3vw;
         }
         
         .sommaire {
