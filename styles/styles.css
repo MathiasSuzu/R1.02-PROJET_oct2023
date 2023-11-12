@@ -147,7 +147,7 @@ body {
 
     /* couleur du lien actif */
     nav.menu ul li.active a h2 {
-        color: var(--actived-color);
+        color: var(--active-color);
     }
 
     /* pointeur de la souris différent car il est déjà sur la page*/
@@ -166,9 +166,14 @@ body {
 
 
     /* modification de transition au survol de la souris */
-    nav.menu ul li a:hover h2 {
+    nav.menu ul li.none-active a:hover h2 {
         color: var(--active-color);
     }
+
+    nav.menu ul li.active a:hover h2 {
+        color: var(--actived-color);
+    }
+
     nav.menu ul li a:hover img {
         transform: scale(1.25);
     }
