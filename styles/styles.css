@@ -147,7 +147,7 @@ body {
 
     /* couleur du lien actif */
     nav.menu ul li.active a h2 {
-        color: var(--active-color);
+        color: var(--actived-color);
     }
 
     /* pointeur de la souris différent car il est déjà sur la page*/
@@ -166,7 +166,7 @@ body {
 
 
     /* modification de transition au survol de la souris */
-    nav.menu ul li.none-active a:hover h2 {
+    nav.menu ul li a:hover h2 {
         color: var(--active-color);
     }
     nav.menu ul li a:hover img {
@@ -258,6 +258,7 @@ body {
         font-size: 1.1rem;
     }
     
+    /* bouton boostrap pas beau -> beau */
     section article .btn-outline-warning {
         --bs-btn-color: var(--active-color);
         --bs-btn-border-color: var(--active-color);
@@ -265,7 +266,7 @@ body {
         --bs-btn-hover-color: var(--text-color);
         --bs-btn-hover-bg: var(--active-color);
         --bs-btn-hover-border-color: var(--active-color);
-        --bs-btn-active-bg: var(--active-color);
+        --bs-btn-active-bg: var(--actived-color);
         --bs-btn-active-border-color: var(--active-color);
         --bs-btn-disabled-color: var(--active-color);
         --bs-btn-disabled-border-color: var(--active-color);
