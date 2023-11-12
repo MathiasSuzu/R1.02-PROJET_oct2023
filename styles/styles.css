@@ -216,12 +216,21 @@ body {
         box-shadow: 0px 0px 15px var(--black-shadow);
     }
 
+    section article * {
+        width: 100%;
+    }
+
     /* titre des article */
     section article h4 {
+        margin-bottom: 2vh;
         font-size: 1.5rem;
-        padding-bottom: 2vh;
         text-decoration: underline;
         text-underline-offset: 0.4vh;
+    }
+
+    section article audio {
+        width: 50%;
+        height: 5vh;
     }
 
     .github-image a{
@@ -346,6 +355,11 @@ body {
     
     section h3 {
         font-size: 1.5rem;
+    }
+    
+    section article audio {
+        width: 100%;
+
     }
 
     .github-image a span {
