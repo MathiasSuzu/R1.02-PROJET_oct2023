@@ -232,6 +232,10 @@ body {
         width: 50%;
     }
 
+    section article table td {
+        border: 1px solid #333;
+    }
+
     .github-image a{
         text-decoration: none;
     }
