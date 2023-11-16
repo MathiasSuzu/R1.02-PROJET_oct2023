@@ -103,12 +103,12 @@ body {
         MENU de navigation
         
 */
-    nav.menu {
+    .menuT {
         position: fixed; /* Fixe la barre de navigation */
         top: 0;
         width: 100%;
     }
-    nav.menu ul {
+    .menuT ul {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -122,8 +122,14 @@ body {
         
     }
 
+    /* bootstrap modifie le magin du ul */
+    .fixBootstrap ul {
+        margin-bottom: 0;
+        
+    }
+
     /* alligner image et texte */
-    nav.menu ul li a{
+    .menuT ul li a{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -133,48 +139,55 @@ body {
         margin: auto 1.5vw;
     }
 
-    nav.menu ul li a h2 {
+    .menuT ul li a h2 {
         font-size: 1.75rem;
+        line-height: 1;
         text-transform: uppercase;
     }
 
     /* taille des images du menu */
-    nav.menu ul li a img {
+    .menuT ul li a img {
         margin-right: 0.5vw;
         width: 1.75rem;
         height: 1.75rem;
     }
 
     /* couleur du lien actif */
-    nav.menu ul li.active a h2 {
+    .menuT ul li.active a h2 {
+        line-height: 1;
         color: var(--active-color);
     }
 
+    /* bootstrap modifie le magin du h2 */
+    .fixBootstrap ul li a h2 {
+        margin: 0;
+    }
+
     /* pointeur de la souris différent car il est déjà sur la page*/
-    nav.menu ul li.active a{
+    .menuT ul li.active a{
         cursor: alias; /*donne l'impression de recharger la page*/
     }
 
     /* transition du texte et de l'image */
-    nav.menu ul li a h2 {
+    .menuT ul li a h2 {
         transition: color 0.2s ease;
     }
 
-    nav.menu ul li a img {
+    .menuT ul li a img {
         transition: transform 0.2s ease;
     }
 
 
     /* modification de transition au survol de la souris */
-    nav.menu ul li.none-active a:hover h2 {
+    .menuT ul li.none-active a:hover h2 {
         color: var(--active-color);
     }
 
-    nav.menu ul li.active a:hover h2 {
+    .menuT ul li.active a:hover h2 {
         color: var(--actived-color);
     }
 
-    nav.menu ul li a:hover img {
+    .menuT ul li a:hover img {
         transform: scale(1.25);
     }
 
@@ -359,11 +372,11 @@ body {
         font-size: 3rem;
     }
 
-    nav.menu ul li a h2 {
+    .menuT ul li a h2 {
         font-size: 1.5rem;
     }
 
-    nav.menu ul li a img {
+    .menuT ul li a img {
         width: 1.5rem;
         height: 1.5rem;
     }
@@ -398,16 +411,16 @@ body {
         font-size: 2.5rem;
     }
     
-    nav.menu ul li a h2 {
+    .menuT ul li a h2 {
         font-size: 1rem;
     }
 
-    nav.menu ul li a img {
+    .menuT ul li a img {
         width: 1rem;
         height: 1rem;
     }
 
-    nav.menu ul li a:hover img {
+    .menuT ul li a:hover img {
         transform: scale(1.35);
     }
     
@@ -453,13 +466,13 @@ body {
             font-size: 7.5vw;
         }
 
-        nav.menu ul li a {
+        .menuT ul li a {
             flex-direction: column;
             align-items: center;
             margin: auto 3vw;
         }
 
-        nav.menu ul li a h2 {
+        .menuT ul li a h2 {
             font-size: 3vw;
             margin-top: 1vh;
         }
